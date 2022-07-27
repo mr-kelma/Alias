@@ -9,21 +9,55 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    //MARK: - Views
+    @IBOutlet weak var outButton: UIBarButtonItem!
+    @IBOutlet weak var currentTeam: UILabel!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var correctButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
+    
+    //MARK: - Properties
+    var gameBrain: GameBrain = GameBrain()
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    
+    
+    
+    
+    //MARK: - Setup views
+    func setupViews() {
+        for button in [correctButton, skipButton] {
+            button?.layer.cornerRadius = 10
+        }
+        navigationItem.hidesBackButton = true
+        outButton.tintColor = .white
     }
-    */
-
+    
+    //MARK: - Actions
+    @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func correctButtonPressed(_ sender: UIButton) {
+        playSound(resource: sender.titleLabel?.text ?? "ПРАВИЛЬНО")
+        
+    }
+    
+    @IBAction func skipButtonPressed(_ sender: UIButton) {
+        playSound(resource: sender.titleLabel?.text ?? "ПРОПУСТИТЬ")
+        
+    }
+    
+    
+    
+    
 }

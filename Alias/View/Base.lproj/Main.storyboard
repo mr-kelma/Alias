@@ -87,7 +87,9 @@
                             <constraint firstItem="s9H-p5-HuL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="110" id="vjc-h1-3xN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3ME-a4-Gaf"/>
+                    <navigationItem key="navigationItem" id="3ME-a4-Gaf">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Mar-uV-fH8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="externalLogoImage" destination="Pe6-4D-5Ai" id="BeF-wg-O5p"/>
                         <outlet property="internalLogoImage" destination="s9H-p5-HuL" id="j6h-hY-Pdi"/>

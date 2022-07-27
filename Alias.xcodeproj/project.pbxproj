@@ -22,7 +22,6 @@
 		709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */; };
 		709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */; };
 		709FD0C9289057A500E200C8 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C8289057A500E200C8 /* MotionViewController.swift */; };
-		972E071E2890654F008B8697 /* 1111.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E071D2890654F008B8697 /* 1111.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfRoundViewController.swift; sourceTree = "<group>"; };
 		709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfFinalViewController.swift; sourceTree = "<group>"; };
 		709FD0C8289057A500E200C8 /* MotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
-		972E071D2890654F008B8697 /* 1111.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1111.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +111,6 @@
 				709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */,
 				709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */,
 				709FD0C8289057A500E200C8 /* MotionViewController.swift */,
-				972E071D2890654F008B8697 /* 1111.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				709FD0C128904BAB00E200C8 /* GameViewController.swift in Sources */,
-				972E071E2890654F008B8697 /* 1111.swift in Sources */,
 				709C11B8288FF6050018867B /* InitialViewController.swift in Sources */,
 				709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */,
 				709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */,
@@ -384,6 +380,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,6 +410,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

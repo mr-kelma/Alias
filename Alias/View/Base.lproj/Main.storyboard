@@ -105,6 +105,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="BGq-oH-did">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qq0-RK-imr">
                                 <rect key="frame" x="146" y="268" width="153" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,12 +140,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hmh-AL-Bcn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BGq-oH-did" secondAttribute="bottom" id="9dh-lj-7md"/>
+                            <constraint firstAttribute="trailing" secondItem="BGq-oH-did" secondAttribute="trailing" id="F60-bg-ZJk"/>
+                            <constraint firstItem="BGq-oH-did" firstAttribute="leading" secondItem="iEw-QB-s7T" secondAttribute="leading" id="Ps2-pq-mXC"/>
+                            <constraint firstItem="BGq-oH-did" firstAttribute="top" secondItem="iEw-QB-s7T" secondAttribute="top" id="gVp-Ym-SiJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cRs-gq-X2D"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKq-Eq-abQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="-253"/>
+            <point key="canvasLocation" x="1269.5652173913045" y="-253.125"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="0eA-BB-tDl">

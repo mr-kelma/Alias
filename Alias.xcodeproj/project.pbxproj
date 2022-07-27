@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701DB04828916EDB004BEB9F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701DB04728916EDB004BEB9F /* CategoryModel.swift */; };
 		705156D02890673E00DEA380 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705156CF2890673E00DEA380 /* GameBrain.swift */; };
 		7068313828915C7800E03B06 /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7068313728915C7800E03B06 /* SoundModel.swift */; };
 		7068313A2891663D00E03B06 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706831392891663D00E03B06 /* TeamModel.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701DB04728916EDB004BEB9F /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		705156CF2890673E00DEA380 /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
 		7068313728915C7800E03B06 /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
 		706831392891663D00E03B06 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				705156CF2890673E00DEA380 /* GameBrain.swift */,
+				701DB04728916EDB004BEB9F /* CategoryModel.swift */,
 				7068313728915C7800E03B06 /* SoundModel.swift */,
 				706831392891663D00E03B06 /* TeamModel.swift */,
 			);
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701DB04828916EDB004BEB9F /* CategoryModel.swift in Sources */,
 				709FD0C128904BAB00E200C8 /* GameViewController.swift in Sources */,
 				709C11B8288FF6050018867B /* InitialViewController.swift in Sources */,
 				7068313A2891663D00E03B06 /* TeamModel.swift in Sources */,

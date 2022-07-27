@@ -9,14 +9,14 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var time: Int = 60
-    var timer = Timer()
-    var wordsWithCategory: Category? = nil
-    var teams: [Team] = []
+    let time: Int = 60
+    let timer = Timer()
+    let wordsWithCategory: Category? = nil
+    let teams: [Team] = []
     var selectedTeam: Team? = nil
     var rounds: Int? = nil
-    var currentRound: Int = 1
-    var currentWord: String? = nil
+    let currentRound: Int = 1
+    let currentWord: String? = nil
     
     //MARK: - Logic
     func gameSetup(){

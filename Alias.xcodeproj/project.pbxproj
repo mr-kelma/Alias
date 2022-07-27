@@ -23,7 +23,7 @@
 		709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */; };
 		709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */; };
 		709FD0C9289057A500E200C8 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C8289057A500E200C8 /* MotionViewController.swift */; };
-		972E071E2890654F008B8697 /* 1111.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E071D2890654F008B8697 /* 1111.swift */; };
+		70F4D72028912F3500D18E2E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 70F4D71F28912F3400D18E2E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfRoundViewController.swift; sourceTree = "<group>"; };
 		709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfFinalViewController.swift; sourceTree = "<group>"; };
 		709FD0C8289057A500E200C8 /* MotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
-		972E071D2890654F008B8697 /* 1111.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1111.swift; sourceTree = "<group>"; };
+		70F4D71F28912F3400D18E2E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 		709C11A7288FF6050018867B = {
 			isa = PBXGroup;
 			children = (
+				70F4D71F28912F3400D18E2E /* .gitignore */,
 				709C11B2288FF6050018867B /* Alias */,
 				709C11B1288FF6050018867B /* Products */,
 			);
@@ -115,7 +116,6 @@
 				709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */,
 				709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */,
 				709FD0C8289057A500E200C8 /* MotionViewController.swift */,
-				972E071D2890654F008B8697 /* 1111.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709C11C0288FF6080018867B /* LaunchScreen.storyboard in Resources */,
+				70F4D72028912F3500D18E2E /* .gitignore in Resources */,
 				709C11D0288FF6BE0018867B /* wron.mp3 in Resources */,
 				709C11CF288FF6BE0018867B /* right.mp3 in Resources */,
 				709C11BD288FF6080018867B /* Assets.xcassets in Resources */,
@@ -223,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				709FD0C128904BAB00E200C8 /* GameViewController.swift in Sources */,
-				972E071E2890654F008B8697 /* 1111.swift in Sources */,
 				709C11B8288FF6050018867B /* InitialViewController.swift in Sources */,
 				709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */,
 				709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */,

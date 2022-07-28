@@ -19,7 +19,7 @@ class GameBrain {
     let currentWord: String? = nil
     
     //MARK: - Logic
-    func gameSetup(){
+    func gameSetup() {
         self.selectedTeam = teams[currentRound - 1]
         self.rounds = teams.count
     }

@@ -8,22 +8,43 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var countTeam: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    
+    @IBOutlet weak var nature: UIButton!
+    @IBOutlet weak var sport: UIButton!
+    @IBOutlet weak var geo: UIButton!
+    @IBOutlet weak var liter: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stepper.value = 0
+        stepper.minimumValue = 0
+        stepper.backgroundColor = .systemMint
+        stepper.tintColor = .orange
+        nature.tintColor = .orange
+        sport.tintColor = .orange
+        geo.tintColor = .orange
+        liter.tintColor = .orange
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func stepperAction(_ sender: UIStepper) {
+        countTeam.text = String(Int(sender.value))
     }
-    */
-
+    
+    
+    @IBAction func pressedGategory(_ sender: UIButton) {
+        
+        
+        sender.alpha = 0.1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            //Bring's sender's opacity back up to fully opaque.
+            sender.alpha = 1
+        }
+    }
 }

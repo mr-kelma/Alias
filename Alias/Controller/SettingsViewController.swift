@@ -39,6 +39,12 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func pressedGategory(_ sender: UIButton) {
-        sender.tintColor = .systemMint
+        
+        
+        sender.alpha = 0.1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            //Bring's sender's opacity back up to fully opaque.
+            sender.alpha = 1
+        }
     }
 }

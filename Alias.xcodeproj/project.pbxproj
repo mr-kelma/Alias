@@ -25,9 +25,7 @@
 		709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */; };
 		709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */; };
 		709FD0C9289057A500E200C8 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C8289057A500E200C8 /* MotionViewController.swift */; };
-		E04F19212890682E00D1ECA8 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04F19202890682E00D1ECA8 /* GamesModel.swift */; };
 		E0BEDFB528912AFE000526A2 /* DictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDFB428912AFE000526A2 /* DictModel.swift */; };
-		70F4D72028912F3500D18E2E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 70F4D71F28912F3400D18E2E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +49,7 @@
 		709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfRoundViewController.swift; sourceTree = "<group>"; };
 		709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfFinalViewController.swift; sourceTree = "<group>"; };
 		709FD0C8289057A500E200C8 /* MotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
-		E04F19202890682E00D1ECA8 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = SOURCE_ROOT; };
 		E0BEDFB428912AFE000526A2 /* DictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DictModel.swift; path = Alias/DictModel.swift; sourceTree = SOURCE_ROOT; };
-		70F4D71F28912F3400D18E2E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +66,6 @@
 		709C11A7288FF6050018867B = {
 			isa = PBXGroup;
 			children = (
-				70F4D71F28912F3400D18E2E /* .gitignore */,
 				709C11B2288FF6050018867B /* Alias */,
 				709C11B1288FF6050018867B /* Products */,
 			);
@@ -131,7 +126,6 @@
 		709C11CA288FF6900018867B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E04F19202890682E00D1ECA8 /* GamesModel.swift */,
 				E0BEDFB428912AFE000526A2 /* DictModel.swift */,
 				705156CF2890673E00DEA380 /* GameBrain.swift */,
 				701DB04728916EDB004BEB9F /* CategoryModel.swift */,
@@ -219,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				709C11C0288FF6080018867B /* LaunchScreen.storyboard in Resources */,
-				70F4D72028912F3500D18E2E /* .gitignore in Resources */,
 				709C11D0288FF6BE0018867B /* ПРОПУСТИТЬ.mp3 in Resources */,
 				709C11CF288FF6BE0018867B /* ПРАВИЛЬНО.mp3 in Resources */,
 				709C11BD288FF6080018867B /* Assets.xcassets in Resources */,
@@ -247,7 +240,6 @@
 				7068313828915C7800E03B06 /* SoundModel.swift in Sources */,
 				709FD0C328904DBB00E200C8 /* SettingsViewController.swift in Sources */,
 				709FD0C9289057A500E200C8 /* MotionViewController.swift in Sources */,
-				E04F19212890682E00D1ECA8 /* GamesModel.swift in Sources */,
 				705156D02890673E00DEA380 /* GameBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

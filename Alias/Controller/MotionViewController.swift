@@ -9,21 +9,26 @@ import UIKit
 
 class MotionViewController: UIViewController {
 
+    @IBOutlet weak var nameTeam: UILabel!
+    @IBOutlet weak var scoreTeam: UILabel!
+    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var questionAction: UILabel!
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var wrongButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func pressedRightButton(_ sender: UIButton) {
+        playSound(resource: sender.titleLabel?.text ?? "ПРАВИЛЬНО")
     }
-    */
-
+    
+    @IBAction func pressedWrongButton(_ sender: UIButton) {
+        
+    }
 }

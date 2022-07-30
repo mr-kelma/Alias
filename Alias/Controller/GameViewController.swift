@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentTeam: UILabel!
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     
@@ -24,14 +25,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupGame()
     }
-    
-    
-    
-    
-    
-    
-    
     
     //MARK: - Setup views
     func setupViews() {
@@ -42,22 +37,35 @@ class GameViewController: UIViewController {
         outButton.tintColor = .white
     }
     
+    func setupGame() {
+        //Запускаем функцию настройки игры
+        gameBrain.gameSetup()
+        //Очки команды
+        score.text = String(gameBrain.selectedTeam?.score ?? 0)
+        //Название команды
+        currentTeam.text = gameBrain.selectedTeam?.name
+        //Первое слово на экране
+        gameBrain.getRandomWord()
+        //Обновляем лэйбл
+        wordLabel.text = gameBrain.currentWord
+        //Запускаем таймер
+        timerProcess()
+    }
+    
     //MARK: - Actions
     @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func correctButtonPressed(_ sender: UIButton) {
+        gameBrain.addPoint()
+        wordLabel.text = gameBrain.currentWord
         playSound(resource: sender.titleLabel?.text ?? "ПРАВИЛЬНО")
-        
     }
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
+        gameBrain.minusPoint()
+        wordLabel.text = gameBrain.currentWord
         playSound(resource: sender.titleLabel?.text ?? "ПРОПУСТИТЬ")
-        
     }
-    
-    
-    
-    
 }

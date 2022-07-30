@@ -8,22 +8,85 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    //MARK: - Views
+    @IBOutlet weak var countTeam: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var natureButton: UIButton!
+    @IBOutlet weak var sportButton: UIButton!
+    @IBOutlet weak var geoButton: UIButton!
+    @IBOutlet weak var literButton: UIButton!
+    
+    //MARK: - Properties
+    var gameBrain: GameBrain = GameBrain()
+    var teams: [Team] = []
+    var selectedCategory: String = "Природа"
+    var wordsOfCategory: Category = Category.nature
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Setup views
+    func setupViews() {
+        for button in [natureButton, sportButton, geoButton, literButton] {
+            button?.layer.cornerRadius = 10
+        }
+        stepper.value = 0
+        stepper.minimumValue = 2
+        stepper.tintColor = .orange
+        natureButton.tintColor = .orange
+        sportButton.tintColor = .orange
+        geoButton.tintColor = .orange
+        literButton.tintColor = .orange
     }
-    */
-
+    
+    //MARK: - Actions
+    @IBAction func stepperAction(_ sender: UIStepper) {
+        countTeam.text = String(Int(sender.value))
+        
+    }
+    
+    //Присваиваем selectedCategory текст кнопки и меняем background
+    @IBAction func pressedGategory(_ sender: UIButton) {
+        guard let text = sender.titleLabel?.text else {
+            return
+        }
+        selectedCategory = text
+        
+        for button in [natureButton, sportButton, geoButton, literButton] {
+            if selectedCategory == button?.titleLabel?.text{
+                button?.backgroundColor = .lightGray
+            } else {
+                button?.backgroundColor = .white
+            }
+        }
+        
+        if selectedCategory == "Природа"{
+            wordsOfCategory = .nature
+        } else if selectedCategory == "Спорт"{
+            wordsOfCategory = .sport
+        } else if selectedCategory == "География"{
+            wordsOfCategory = .geo
+        } else if selectedCategory == "Литература"{
+            wordsOfCategory = .liter
+        }
+    }
+    
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        for i in 1...Int(stepper.value){
+            teams.append(Team(name: "Команда \(i)"))
+        }
+        gameBrain.teams = teams
+        gameBrain.wordsOfCategory = wordsOfCategory
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGame" {
+            let destinationVC = segue.destination as! GameViewController
+            destinationVC.gameBrain = gameBrain
+        }
+    }
 }

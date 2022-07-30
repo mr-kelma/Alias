@@ -6,12 +6,10 @@
 //
 
 import Foundation
-
-struct ActionQuestion {
     
-    let question: String
+    //let question = [
 
     
     
-}
+
 

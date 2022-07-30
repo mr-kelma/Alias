@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MotionViewController: UIViewController {
 
@@ -20,15 +21,20 @@ class MotionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        startViews()
     }
     
+    func startViews() {
+        for button in [rightButton, wrongButton] {
+            button?.layer.cornerRadius = 10
+        }
     
+    }
     @IBAction func pressedRightButton(_ sender: UIButton) {
-        playSound(resource: sender.titleLabel?.text ?? "ПРАВИЛЬНО")
+        playSound(resource: "ПРАВИЛЬНО")
     }
     
     @IBAction func pressedWrongButton(_ sender: UIButton) {
-        
+        playSound(resource: "ПРОПУСТИТЬ")
     }
 }

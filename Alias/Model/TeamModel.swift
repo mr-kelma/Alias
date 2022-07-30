@@ -7,11 +7,8 @@
 
 import Foundation
 
-class Team {
+struct Team {
     var name: String
     var score: Int = 0
     var guessedWords: Int = 0
-    init(name: String){
-        self.name = name
-    }
 }

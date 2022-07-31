@@ -12,7 +12,6 @@ class  ActionBrain{
     var teams: [Team] = []
     var selectedTeam: Team? = nil
     var currentWord: String? = nil
-    
 
 
     func getRandomActionWord() {
@@ -23,10 +22,12 @@ class  ActionBrain{
     func addPoint() {
         selectedTeam?.score += 3
         selectedTeam?.guessedWords += 3
+        //Прописать сигвей на основной экран игры
     }
 
     func minusPoint() {
         selectedTeam?.score -= 3
+        //Прописать сигвей на основной экран игры
     }
 
     }

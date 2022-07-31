@@ -29,15 +29,6 @@
                                     <constraint firstAttribute="width" constant="250" id="sSF-lY-vyc"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="s9H-p5-HuL">
-                                <rect key="frame" x="167" y="199" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="2c8-1K-CEH"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="JcA-l7-mNF"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="SFF-YP-BLV"/>
-                                    <constraint firstAttribute="height" constant="80" id="SZI-ss-UBI"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSY-uy-XeM">
                                 <rect key="frame" x="57" y="364" width="300" height="170"/>
                                 <constraints>
@@ -84,14 +75,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="28j-aC-VL6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="61X-Co-kkX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="s9H-p5-HuL" secondAttribute="trailing" constant="147" id="8QG-zU-zKk"/>
                             <constraint firstItem="3Ju-Wg-350" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="99l-gD-myo"/>
                             <constraint firstItem="aSY-uy-XeM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="Hz4-gO-uLZ"/>
                             <constraint firstItem="3Ju-Wg-350" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="Xcx-jF-R0f"/>
-                            <constraint firstItem="s9H-p5-HuL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="147" id="XuG-nm-5K7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pe6-4D-5Ai" secondAttribute="trailing" constant="62" id="ZLk-ru-4SP"/>
                             <constraint firstItem="Pe6-4D-5Ai" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="70" id="cNJ-yg-XDt"/>
-                            <constraint firstItem="s9H-p5-HuL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="155" id="iFT-zC-GmO"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="aSY-uy-XeM" secondAttribute="trailing" id="kBT-7d-peb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Ju-Wg-350" secondAttribute="trailing" constant="9" id="mFe-LR-9JF"/>
                             <constraint firstItem="aSY-uy-XeM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="320" id="pJc-Lg-IQ9"/>
@@ -103,7 +91,6 @@
                     <navigationItem key="navigationItem" id="3ME-a4-Gaf"/>
                     <connections>
                         <outlet property="externalLogoImage" destination="Pe6-4D-5Ai" id="BeF-wg-O5p"/>
-                        <outlet property="internalLogoImage" destination="s9H-p5-HuL" id="j6h-hY-Pdi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -256,7 +243,9 @@
                             <constraint firstItem="Ij1-DC-Z5j" firstAttribute="top" secondItem="Yka-ij-AUF" secondAttribute="bottom" id="zHs-Jc-WMA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cRs-gq-X2D"/>
+                    <navigationItem key="navigationItem" id="cRs-gq-X2D">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="cZw-ac-h87"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="countTeam" destination="bwF-cc-GKu" id="Bad-dI-mdv"/>
                         <outlet property="geoButton" destination="BP0-Uv-tos" id="rUl-Vu-p6Z"/>
@@ -838,8 +827,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ktc-km-kKY"/>
-        <segue reference="GDb-0R-Er2"/>
+        <segue reference="gtG-xT-TeB"/>
         <segue reference="5CQ-TY-ruU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

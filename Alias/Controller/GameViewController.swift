@@ -18,8 +18,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     //MARK: - Properties
-    var gameBrain: GameBrain = GameBrain()
+    var gameBrain: GameBrain?
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -38,34 +42,37 @@ class GameViewController: UIViewController {
     }
     
     func setupGame() {
-        //Запускаем функцию настройки игры
-        gameBrain.gameSetup()
-        //Очки команды
-        score.text = String(gameBrain.selectedTeam?.score ?? 0)
-        //Название команды
-        currentTeam.text = gameBrain.selectedTeam?.name
-        //Первое слово на экране
-        gameBrain.getRandomWord()
-        //Обновляем лэйбл
-        wordLabel.text = gameBrain.currentWord
-        //Запускаем таймер
+        //Launch the game setup function
+        gameBrain?.gameSetup()
+        //Team score
+        score.text = String(gameBrain?.selectedTeam?.score ?? 0)
+        //Team nameды
+        currentTeam.text = gameBrain?.selectedTeam?.name
+        //The first word on the screen
+        gameBrain?.getRandomWord()
+        //Updating the word label
+        wordLabel.text = gameBrain?.currentWord
+        //Starting the timer
         timerProcess()
     }
     
     //MARK: - Actions
     @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
         self.navigationController?.popToRootViewController(animated: true)
+        gameBrain?.resetGame()
     }
     
     @IBAction func correctButtonPressed(_ sender: UIButton) {
-        gameBrain.addPoint()
-        wordLabel.text = gameBrain.currentWord
+        gameBrain?.addPoint()
+        wordLabel.text = gameBrain?.currentWord
+        score.text = String(gameBrain?.selectedTeam?.score ?? 0)
         playSound(resource: sender.titleLabel?.text ?? "ПРАВИЛЬНО")
     }
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
-        gameBrain.minusPoint()
-        wordLabel.text = gameBrain.currentWord
+        gameBrain?.minusPoint()
+        wordLabel.text = gameBrain?.currentWord
+        score.text = String(gameBrain?.selectedTeam?.score ?? 0)
         playSound(resource: sender.titleLabel?.text ?? "ПРОПУСТИТЬ")
     }
 }

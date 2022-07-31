@@ -31,10 +31,10 @@ class MotionViewController: UIViewController {
     
     }
     @IBAction func pressedRightButton(_ sender: UIButton) {
-        playSound(resource: "ПРАВИЛЬНО")
+        playSound(resource: "ВЫПОЛНИЛ")
     }
     
     @IBAction func pressedWrongButton(_ sender: UIButton) {
-        playSound(resource: "ПРОПУСТИТЬ")
+        playSound(resource: "НЕ ВЫПОЛНИЛ")
     }
 }

@@ -25,15 +25,12 @@ extension GameViewController {
             gameBrain?.time = 0
             gameBrain?.timer.invalidate()
             //Переходы на экраны результатов
-            guard let rounds = gameBrain?.rounds else {
-                return
-            }
-            if gameBrain?.currentRound ?? 2 < rounds {
+            guard let rounds = gameBrain?.rounds else {return}
+            if gameBrain?.currentRound ?? 1 < rounds {
             self.performSegue(withIdentifier: "goToResultOfRound", sender: self)
             } else {
                 self.performSegue(withIdentifier: "goToResultOfFinal", sender: self)
             }
         }
     }
-    
 }

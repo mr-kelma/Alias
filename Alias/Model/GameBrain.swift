@@ -9,7 +9,7 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var time: Int = 60
+    var time: Int = 10
     var timer = Timer()
     var wordsOfCategory: Category? = nil
     var teams: [Team] = []

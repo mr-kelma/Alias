@@ -412,7 +412,7 @@
                         <outlet property="wordLabel" destination="3OB-e5-4xi" id="KOW-3t-p7u"/>
                         <segue destination="TE6-lU-IvU" kind="show" identifier="goToResultOfRound" id="ULZ-so-PFh"/>
                         <segue destination="IkA-1Q-TI4" kind="show" identifier="goToResultOfFinal" id="7lb-NB-Zzr"/>
-                        <segue destination="diS-Cm-udP" kind="show" identifier="goToMotion" id="GDb-0R-Er2"/>
+                        <segue destination="diS-Cm-udP" kind="show" identifier="goToActionScreen" id="GDb-0R-Er2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRZ-nV-FMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -827,7 +827,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gtG-xT-TeB"/>
+        <segue reference="GDb-0R-Er2"/>
         <segue reference="5CQ-TY-ruU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -695,6 +695,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="pressedRightButton:" destination="diS-Cm-udP" eventType="touchUpInside" id="DY3-8A-jhc"/>
+                                            <segue destination="xtB-P9-F6c" kind="presentation" identifier="backToGame" id="XXd-jW-5YX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uP9-6q-hYJ" userLabel="WrongButton">
@@ -707,6 +708,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="pressedWrongButton:" destination="diS-Cm-udP" eventType="touchUpInside" id="sLp-0e-ty8"/>
+                                            <segue destination="xtB-P9-F6c" kind="presentation" identifier="backToGame2" id="UIa-tF-bzr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -806,12 +808,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="jwU-uS-FMB"/>
                     <connections>
-                        <outlet property="NameTeam" destination="3yL-Nh-wme" id="Mm8-Vg-rFT"/>
-                        <outlet property="ScoreTeam" destination="EFl-IS-kAb" id="8dO-FZ-DC8"/>
-                        <outlet property="nameTeam" destination="3yL-Nh-wme" id="I1W-Xa-aVp"/>
+                        <outlet property="nameTeam" destination="3yL-Nh-wme" id="DJM-Vq-lwd"/>
                         <outlet property="questionAction" destination="553-oF-2i3" id="KqA-6M-kLt"/>
                         <outlet property="rightButton" destination="hkV-jB-cd5" id="dmq-Iu-ujX"/>
-                        <outlet property="scoreTeam" destination="EFl-IS-kAb" id="sQx-Ei-TRH"/>
+                        <outlet property="scoreTeam" destination="EFl-IS-kAb" id="6x6-fX-OIs"/>
                         <outlet property="timer" destination="jN3-zW-1rO" id="o4E-fI-yJG"/>
                         <outlet property="wrongButton" destination="uP9-6q-hYJ" id="fIZ-Of-Kbu"/>
                     </connections>
@@ -838,8 +838,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ktc-km-kKY"/>
         <segue reference="GDb-0R-Er2"/>
+        <segue reference="UIa-tF-bzr"/>
         <segue reference="5CQ-TY-ruU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

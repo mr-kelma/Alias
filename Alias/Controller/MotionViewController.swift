@@ -48,14 +48,10 @@ class MotionViewController: UIViewController {
     
     }
     @IBAction func pressedRightButton(_ sender: UIButton) {
-        actionBrain.addPoint()
-        playSound(resource: "ПРАВИЛЬНО")
-        self.performSegue(withIdentifier: "backToGame", sender: self)
+        playSound(resource: "ВЫПОЛНИЛ")
     }
     
     @IBAction func pressedWrongButton(_ sender: UIButton) {
-        actionBrain.minusPoint()
-        playSound(resource: "ПРОПУСТИТЬ")
-        self.performSegue(withIdentifier: "backToGame2", sender: self)
+        playSound(resource: "НЕ ВЫПОЛНИЛ")
     }
 }

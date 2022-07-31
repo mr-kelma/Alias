@@ -11,11 +11,13 @@ class InitialViewController: UIViewController {
 
     //MARK: - Views
     @IBOutlet weak var externalLogoImage: UIImageView!
-    @IBOutlet weak var internalLogoImage: UIImageView!
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        rotateView(targetView: internalLogoImage)
     }
 }

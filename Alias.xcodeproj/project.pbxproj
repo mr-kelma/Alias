@@ -26,6 +26,8 @@
 		709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */; };
 		709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */; };
 		709FD0C9289057A500E200C8 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C8289057A500E200C8 /* MotionViewController.swift */; };
+		70B97B802896AE6F0035A3E7 /* ВЫПОЛНИЛ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70B97B7F2896AE6F0035A3E7 /* ВЫПОЛНИЛ.wav */; };
+		70B97B822896AE7D0035A3E7 /* НЕ ВЫПОЛНИЛ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70B97B812896AE7D0035A3E7 /* НЕ ВЫПОЛНИЛ.wav */; };
 		70DC76C52893CD72000E46F0 /* ПРАВИЛЬНО.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70DC76C42893CD72000E46F0 /* ПРАВИЛЬНО.wav */; };
 		70DC76C72893CD7B000E46F0 /* ПРОПУСТИТЬ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */; };
 		97C9BC282894133900A2DEB6 /* ActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9BC272894133900A2DEB6 /* ActionModel.swift */; };
@@ -54,6 +56,8 @@
 		709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfRoundViewController.swift; sourceTree = "<group>"; };
 		709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfFinalViewController.swift; sourceTree = "<group>"; };
 		709FD0C8289057A500E200C8 /* MotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
+		70B97B7F2896AE6F0035A3E7 /* ВЫПОЛНИЛ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ВЫПОЛНИЛ.wav"; sourceTree = "<group>"; };
+		70B97B812896AE7D0035A3E7 /* НЕ ВЫПОЛНИЛ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "НЕ ВЫПОЛНИЛ.wav"; sourceTree = "<group>"; };
 		70DC76C42893CD72000E46F0 /* ПРАВИЛЬНО.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ПРАВИЛЬНО.wav"; sourceTree = "<group>"; };
 		70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ПРОПУСТИТЬ.wav"; sourceTree = "<group>"; };
 		97C9BC272894133900A2DEB6 /* ActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModel.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			children = (
 				70DC76C42893CD72000E46F0 /* ПРАВИЛЬНО.wav */,
 				70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */,
+				70B97B7F2896AE6F0035A3E7 /* ВЫПОЛНИЛ.wav */,
+				70B97B812896AE7D0035A3E7 /* НЕ ВЫПОЛНИЛ.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 			files = (
 				709C11C0288FF6080018867B /* LaunchScreen.storyboard in Resources */,
 				70DC76C52893CD72000E46F0 /* ПРАВИЛЬНО.wav in Resources */,
+				70B97B822896AE7D0035A3E7 /* НЕ ВЫПОЛНИЛ.wav in Resources */,
 				709C11BD288FF6080018867B /* Assets.xcassets in Resources */,
 				70108EB42893C47A00E80AC8 /* .gitignore in Resources */,
 				70DC76C72893CD7B000E46F0 /* ПРОПУСТИТЬ.wav in Resources */,
+				70B97B802896AE6F0035A3E7 /* ВЫПОЛНИЛ.wav in Resources */,
 				709C11BB288FF6050018867B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +417,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -439,7 +447,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

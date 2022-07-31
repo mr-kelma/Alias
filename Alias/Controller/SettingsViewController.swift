@@ -17,6 +17,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var geoButton: UIButton!
     @IBOutlet weak var literButton: UIButton!
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     //MARK: - Properties
     var gameBrain: GameBrain = GameBrain()
     var teams: [Team] = []
@@ -36,11 +40,9 @@ class SettingsViewController: UIViewController {
         }
         stepper.value = 0
         stepper.minimumValue = 2
-        stepper.tintColor = .orange
-        natureButton.tintColor = .orange
-        sportButton.tintColor = .orange
-        geoButton.tintColor = .orange
-        literButton.tintColor = .orange
+        for button in [natureButton, sportButton, geoButton, literButton] {
+            button?.tintColor = .orange
+        }
     }
     
     //MARK: - Actions
@@ -58,19 +60,19 @@ class SettingsViewController: UIViewController {
         
         for button in [natureButton, sportButton, geoButton, literButton] {
             if selectedCategory == button?.titleLabel?.text{
-                button?.backgroundColor = .lightGray
+                button?.tintColor = #colorLiteral(red: 0.8885846397, green: 0.4469456078, blue: 0.002523117625, alpha: 1)
             } else {
-                button?.backgroundColor = .white
+                button?.tintColor = .orange
             }
         }
         
-        if selectedCategory == "Природа"{
+        if selectedCategory == "Природа" {
             wordsOfCategory = .nature
-        } else if selectedCategory == "Спорт"{
+        } else if selectedCategory == "Спорт" {
             wordsOfCategory = .sport
-        } else if selectedCategory == "География"{
+        } else if selectedCategory == "География" {
             wordsOfCategory = .geo
-        } else if selectedCategory == "Литература"{
+        } else if selectedCategory == "Литература" {
             wordsOfCategory = .liter
         }
     }

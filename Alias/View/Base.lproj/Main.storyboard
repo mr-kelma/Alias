@@ -838,8 +838,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Ktc-km-kKY"/>
         <segue reference="GDb-0R-Er2"/>
-        <segue reference="AWD-zs-9s5"/>
         <segue reference="5CQ-TY-ruU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

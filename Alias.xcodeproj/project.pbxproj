@@ -26,12 +26,9 @@
 		709FD0C528904DD000E200C8 /* ResultOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */; };
 		709FD0C728904DE400E200C8 /* ResultOfFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */; };
 		709FD0C9289057A500E200C8 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD0C8289057A500E200C8 /* MotionViewController.swift */; };
-		70F4D72028912F3500D18E2E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 70F4D71F28912F3400D18E2E /* .gitignore */; };
-		97C9BC282894133900A2DEB6 /* ActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9BC272894133900A2DEB6 /* ActionModel.swift */; };
-		E04F19212890682E00D1ECA8 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04F19202890682E00D1ECA8 /* GamesModel.swift */; };
 		70DC76C52893CD72000E46F0 /* ПРАВИЛЬНО.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70DC76C42893CD72000E46F0 /* ПРАВИЛЬНО.wav */; };
 		70DC76C72893CD7B000E46F0 /* ПРОПУСТИТЬ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */; };
-		E0BEDFB528912AFE000526A2 /* DictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BEDFB428912AFE000526A2 /* DictModel.swift */; };
+		97C9BC282894133900A2DEB6 /* ActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9BC272894133900A2DEB6 /* ActionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +53,9 @@
 		709FD0C428904DD000E200C8 /* ResultOfRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfRoundViewController.swift; sourceTree = "<group>"; };
 		709FD0C628904DE400E200C8 /* ResultOfFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOfFinalViewController.swift; sourceTree = "<group>"; };
 		709FD0C8289057A500E200C8 /* MotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
-		70F4D71F28912F3400D18E2E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		97C9BC272894133900A2DEB6 /* ActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModel.swift; sourceTree = "<group>"; };
-		E04F19202890682E00D1ECA8 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = SOURCE_ROOT; };
 		70DC76C42893CD72000E46F0 /* ПРАВИЛЬНО.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ПРАВИЛЬНО.wav"; sourceTree = "<group>"; };
 		70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ПРОПУСТИТЬ.wav"; sourceTree = "<group>"; };
-		E0BEDFB428912AFE000526A2 /* DictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DictModel.swift; path = Alias/DictModel.swift; sourceTree = SOURCE_ROOT; };
+		97C9BC272894133900A2DEB6 /* ActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				705156CF2890673E00DEA380 /* GameBrain.swift */,
-				E0BEDFB428912AFE000526A2 /* DictModel.swift */,
 				701DB04728916EDB004BEB9F /* CategoryModel.swift */,
 				70169DA32893D1B3009733DD /* AnimationModel.swift */,
 				7068313728915C7800E03B06 /* SoundModel.swift */,
@@ -246,7 +239,6 @@
 			files = (
 				701DB04828916EDB004BEB9F /* CategoryModel.swift in Sources */,
 				709FD0C128904BAB00E200C8 /* GameViewController.swift in Sources */,
-				E0BEDFB528912AFE000526A2 /* DictModel.swift in Sources */,
 				709C11B8288FF6050018867B /* InitialViewController.swift in Sources */,
 				70169DA42893D1B3009733DD /* AnimationModel.swift in Sources */,
 				7068313A2891663D00E03B06 /* TeamModel.swift in Sources */,

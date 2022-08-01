@@ -57,7 +57,7 @@ class GameViewController: UIViewController {
         //Updating the wordlabel
         wordLabel.text = gameBrain?.currentWord
         //Starting the timer
-        timerProcess()
+        timerProcessOfMainGame()
     }
     
     //MARK: - Actions

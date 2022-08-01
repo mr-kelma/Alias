@@ -11,14 +11,5 @@ class RulesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
-    
-    @IBAction func ButtonPerehod(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "goToAction", sender: self)
-    }
-    
-
 }

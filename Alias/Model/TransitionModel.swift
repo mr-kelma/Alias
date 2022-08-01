@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 //MARK: - Transition for SettingsViewController
 extension SettingsViewController {
     
@@ -31,6 +29,10 @@ extension GameViewController {
         if segue.identifier == "goToResultOfRound" {
             let destinationVC = segue.destination as! ResultOfRoundViewController
             destinationVC.gameBrain = gameBrain
+            destinationVC.goBack = { [weak self] in
+                self?.gameBrain?.changeSelectedTeam()
+                self?.setupGame()
+            }
         }
     }
 }

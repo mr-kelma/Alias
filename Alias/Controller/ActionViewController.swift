@@ -14,7 +14,7 @@ class ActionViewController: UIViewController {
     @IBOutlet weak var currentTeam: UILabel!
     @IBOutlet weak var currentTeamLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var wrongButton: UIButton!
@@ -34,10 +34,10 @@ class ActionViewController: UIViewController {
         for button in [rightButton, wrongButton] {
             button?.layer.cornerRadius = 10
         }
+        navigationItem.hidesBackButton = true
     }
 
     func setupGame() {
-        navigationItem.hidesBackButton = true
         //Team score
         scoreLabel.text = String(gameBrain?.selectedTeam?.score ?? 0)
         //Team nameды
@@ -46,6 +46,8 @@ class ActionViewController: UIViewController {
         gameBrain?.getRandomActionWord()
         //Updating the actionlabel
         actionLabel.text = gameBrain?.currentAction
+        //Starting the timer
+//        timerProcessOfAction()
     }
     
     //MARK: - Actions

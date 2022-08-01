@@ -9,8 +9,10 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var time: Int = 20
-    var timer = Timer()
+    var timeOfGame: Int = 20
+    var timerOfGame = Timer()
+    var timeOfAction: Int = 10
+    var timerOfAction = Timer()
     var wordsOfCategory: Category?
     var action: Action = Action()
     var teams: [Team] = []
@@ -64,6 +66,12 @@ class GameBrain {
     
     func changeSelectedTeam() {
         currentRound += 1
+    }
+    
+    func saveScore() {
+        for var team in teams {
+            team.score = selectedTeam?.score ?? 0
+        }
     }
     
     func resetGame() {

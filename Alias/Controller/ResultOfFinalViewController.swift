@@ -9,11 +9,19 @@ import UIKit
 
 class ResultOfFinalViewController: UIViewController {
 
+    //MARK: - Views
+    @IBOutlet weak var outButton: UIBarButtonItem!
+    
+    
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        navigationItem.hidesBackButton = true
     }
+    
+    
+    
     
 
 }

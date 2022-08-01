@@ -40,6 +40,7 @@ class SettingsViewController: UIViewController {
         }
         stepper.value = 0
         stepper.minimumValue = 2
+        stepper.maximumValue = 5
         for button in [natureButton, sportButton, geoButton, literButton] {
             button?.tintColor = .orange
         }

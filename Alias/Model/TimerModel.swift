@@ -10,28 +10,45 @@ import UIKit
 //MARK: - Timer for GameViewController
 extension GameViewController {
     
-    func timerProcess(){
-        gameBrain?.timer.invalidate()
-        gameBrain?.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    func timerProcessOfMainGame(){
+        gameBrain?.timerOfGame.invalidate()
+        gameBrain?.timerOfGame = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc
     func updateTimer() {
-        if gameBrain?.time != 0 {
-            gameBrain?.time -= 1
-            timerLabel.text = String(gameBrain?.time ?? 0)
-            guard gameBrain?.time == 10 else {return}
+        if gameBrain?.timeOfGame != 0 {
+            gameBrain?.timeOfGame -= 1
+            timerLabel.text = String(gameBrain?.timeOfGame ?? 0)
+            guard gameBrain?.timeOfGame == 10 else {return}
             self.performSegue(withIdentifier: "goToAction", sender: self)
         } else {
-            gameBrain?.time = 0
-            gameBrain?.timer.invalidate()
+            gameBrain?.timeOfGame = 0
+            gameBrain?.timerOfGame.invalidate()
             //Transitions to results screens
             guard let rounds = gameBrain?.rounds else {return}
-            if gameBrain?.currentRound ?? 1 < rounds {
-            self.performSegue(withIdentifier: "goToResultOfRound", sender: self)
+            if gameBrain?.currentRound ?? 0 < rounds {
+                self.performSegue(withIdentifier: "goToResultOfRound", sender: self)
             } else {
                 self.performSegue(withIdentifier: "goToResultOfFinal", sender: self)
             }
         }
     }
 }
+
+//MARK: - Timer for ActionViewController
+//extension ActionViewController {
+//    
+//    func timerProcessOfAction(){
+//        gameBrain?.timerOfAction.invalidate()
+//        gameBrain?.timerOfAction = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+//    }
+//    
+//    @objc
+//    func updateTimer() {
+//        if gameBrain?.timeOfAction != 0 {
+//            gameBrain?.timeOfAction -= 1
+//            timerLabel.text = String(gameBrain?.timeOfAction ?? 0)
+//        }
+//    }
+//}

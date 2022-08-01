@@ -33,7 +33,6 @@
 		70DC76C72893CD7B000E46F0 /* ПРОПУСТИТЬ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */; };
 		97C9BC282894133900A2DEB6 /* ActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9BC272894133900A2DEB6 /* ActionModel.swift */; };
 		97FB44CF289803EC0090BC7A /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB44CE289803EC0090BC7A /* JokeManager.swift */; };
-		97FB44D128980C930090BC7A /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB44D028980C930090BC7A /* JokeData.swift */; };
 		97FB44D3289810460090BC7A /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB44D2289810450090BC7A /* JokeModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +65,6 @@
 		70DC76C62893CD7B000E46F0 /* ПРОПУСТИТЬ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ПРОПУСТИТЬ.wav"; sourceTree = "<group>"; };
 		97C9BC272894133900A2DEB6 /* ActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModel.swift; sourceTree = "<group>"; };
 		97FB44CE289803EC0090BC7A /* JokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
-		97FB44D028980C930090BC7A /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
 		97FB44D2289810450090BC7A /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,13 +147,12 @@
 				97C9BC272894133900A2DEB6 /* ActionModel.swift */,
 				70169DA32893D1B3009733DD /* AnimationModel.swift */,
 				701DB04728916EDB004BEB9F /* CategoryModel.swift */,
+				97FB44CE289803EC0090BC7A /* JokeManager.swift */,
+				97FB44D2289810450090BC7A /* JokeModel.swift */,
 				7068313728915C7800E03B06 /* SoundModel.swift */,
 				706831392891663D00E03B06 /* TeamModel.swift */,
 				70169DA52894162F009733DD /* TimerModel.swift */,
 				7097385F2897DA7B00357015 /* TransitionModel.swift */,
-				97FB44CE289803EC0090BC7A /* JokeManager.swift */,
-				97FB44D028980C930090BC7A /* JokeData.swift */,
-				97FB44D2289810450090BC7A /* JokeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				701DB04828916EDB004BEB9F /* CategoryModel.swift in Sources */,
-				97FB44D128980C930090BC7A /* JokeData.swift in Sources */,
 				709FD0C128904BAB00E200C8 /* GameViewController.swift in Sources */,
 				709738602897DA7B00357015 /* TransitionModel.swift in Sources */,
 				709C11B8288FF6050018867B /* InitialViewController.swift in Sources */,

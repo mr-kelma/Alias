@@ -9,7 +9,7 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var timeOfGame: Int = 20
+    var timeOfGame: Int = 10
     var timerOfGame = Timer()
     var timeOfAction: Int = 10
     var timerOfAction = Timer()

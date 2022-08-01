@@ -10,12 +10,15 @@ import UIKit
 class ResultOfRoundViewController: UIViewController {
 
     //MARK: - Views
+    @IBOutlet weak var outButton: UIBarButtonItem!
     @IBOutlet weak var currentResultLabel: UILabel!
     @IBOutlet weak var nextTeamLabel: UILabel!
-    @IBOutlet weak var outButton: UIBarButtonItem!
+    @IBOutlet weak var jokeLabel: UILabel!
+    
     
     //MARK: - Properties
     var gameBrain: GameBrain?
+    var jokeManager = JokeManager()
     var goBack: (()-> ())?
     
     //MARK: - Lifecycle
@@ -28,13 +31,19 @@ class ResultOfRoundViewController: UIViewController {
     func startViews() {
         navigationItem.hidesBackButton = true
         outButton.tintColor = .white
+        jokeManager.delegate = self
         currentResultLabel.text = "\(gameBrain?.selectedTeam?.name ?? "Команда 1") набрала: \(gameBrain?.selectedTeam?.score ?? 0) очков"
         nextTeamLabel.text = "Следующая играет: \(gameBrain?.getNextTeamName() ?? "Команда 2")"
     }
     
     //MARK: - Actions
+    @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+        gameBrain?.resetGame()
+    }
+    
     @IBAction func nextRoundPressed(_ sender: Any) {
-        goBack?()
         navigationController?.popViewController(animated: true)
+        goBack?()
     }
 }

@@ -12,7 +12,6 @@ struct JokeData: Decodable {
     }
 
 struct Joke: Decodable {
-    let setup: String
-    let punchline: String
+    let content: String
     }
     

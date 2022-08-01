@@ -18,8 +18,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     
-    let jokeManager = JokeManager()
-    
     override var shouldAutorotate: Bool {
         return false
     }
@@ -50,7 +48,7 @@ class GameViewController: UIViewController {
     func setupGame() {
         //Launch the game setup function
         gameBrain?.gameSetup()
-        //Team nameды
+        //Team name
         currentTeamLabel.text = gameBrain?.selectedTeam?.name
         //Team score
         scoreLabel.text = String(gameBrain?.selectedTeam?.score ?? 0)

@@ -36,3 +36,15 @@ extension GameViewController {
         }
     }
 }
+
+//MARK: - Transitions for ResultOfRoundViewController
+extension ResultOfRoundViewController: JokeManagerDelegate {
+    func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke) {
+        DispatchQueue.main.async {
+            self.jokeLabel.text = joke.content
+        }
+    }
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+}

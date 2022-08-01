@@ -1,29 +1,21 @@
 import Foundation
 
-protocol JokeManagerDelegate {
-    func didUpdateJoke(_ jokeManager: JokeManager, joke: JokeModel)
+protocol JokeManagerDelegate: AnyObject {
+    func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke)
     func didFailWithError(error: Error)
 }
 
 struct JokeManager {
     
-    let baseURL = "https://joke.deno.dev/"
-    //let apiKey = "YOUR_API_KEY_HERE"
-
+    let jokeURL = "http://rzhunemogu.ru/RandJSON.aspx?CType=1"
+    weak var delegate: JokeManagerDelegate?
     
-    var delegate: JokeManagerDelegate?
-    
-    func fetcJoke(with urlString: String) {
-        let urlString = baseURL
-        performRequest(with: urlString)
-    }
-    func performRequest (with urlString: String) {
-        if let url = URL(string: urlString) {
+    func performRequest(with jokeURL: String) {
+        if let url = URL(string: jokeURL) {
             let session = URLSession(configuration: .default)
+            
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    self.delegate?.didFailWithError(error: error!)
-                    print(error!)
                     return
                 }
                 
@@ -37,24 +29,14 @@ struct JokeManager {
         }
     }
     
-    func parseJSON(_ data: Data) -> JokeModel? {
-        
-        //Create a JSONDecoder
+    func parseJSON(_ data: Data) -> Joke? {
         let decoder = JSONDecoder()
         do {
-            let decodedData = try decoder.decode(JokeData.self, from: data)
-            let setup = decodedData.joke[0]
-            let punchline = decodedData.joke[1]
-            return nil
-            
-            
+            let decodeData = try decoder.decode(Joke.self, from: data)
+            return decodeData
         } catch {
-            
-       
-            print(error)
+            delegate?.didFailWithError(error: error)
             return nil
-    
         }
-
     }
 }

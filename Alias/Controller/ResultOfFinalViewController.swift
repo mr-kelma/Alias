@@ -12,16 +12,24 @@ class ResultOfFinalViewController: UIViewController {
     //MARK: - Views
     @IBOutlet weak var outButton: UIBarButtonItem!
     
-    
+    //MARK: - Properties
+    var gameBrain: GameBrain?
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
+        startViews()
     }
     
+    //MARK: - Setup views
+    func startViews() {
+        navigationItem.hidesBackButton = true
+        outButton.tintColor = .white
+    }
     
-    
-    
-
+    //MARK: - Actions
+    @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+        gameBrain?.resetGame()
+    }
 }

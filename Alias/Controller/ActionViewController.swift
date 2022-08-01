@@ -47,10 +47,15 @@ class ActionViewController: UIViewController {
         //Updating the actionlabel
         actionLabel.text = gameBrain?.currentAction
         //Starting the timer
-//        timerProcessOfAction()
+        timerProcessOfAction()
     }
     
     //MARK: - Actions
+    @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+        gameBrain?.resetGame()
+    }
+    
     @IBAction func pressedRightButton(_ sender: UIButton) {
         gameBrain?.addPointForAction()
         navigationController?.popViewController(animated: true)

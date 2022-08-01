@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct JokeModel {
-    let setup: String
-    let punchline: String
+struct Joke: Decodable {
+    let content: String
 }
-    
-    
-

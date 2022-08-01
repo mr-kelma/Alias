@@ -28,6 +28,9 @@ extension GameViewController {
             let destinationVC = segue.destination as! ActionViewController
             destinationVC.gameBrain = gameBrain
         }
+        if segue.identifier == "goToResultOfRound" {
+            let destinationVC = segue.destination as! ResultOfRoundViewController
+            destinationVC.gameBrain = gameBrain
+        }
     }
-    
 }

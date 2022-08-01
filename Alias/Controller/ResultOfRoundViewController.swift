@@ -9,21 +9,29 @@ import UIKit
 
 class ResultOfRoundViewController: UIViewController {
 
+    //MARK: - Views
+    
+    @IBOutlet weak var currentResultLabel: UILabel!
+    @IBOutlet weak var nextTeamLabel: UILabel!
+    
+    //MARK: - Properties
+    var gameBrain: GameBrain?
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        startViews()
+    }
+     
+    //MARK: - Setup views
+    func startViews() {
+        currentResultLabel.text = "\(gameBrain?.selectedTeam?.name ?? "Команда 1") набрала: \(gameBrain?.selectedTeam?.score ?? 0) очков"
+        nextTeamLabel.text = "Следующая играет \(gameBrain?.getNextTeamName() ?? "Команда 2")"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Actions
+    
+    @IBAction func nextRoundPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }

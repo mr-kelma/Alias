@@ -11,14 +11,14 @@ class GameBrain {
     //MARK: - Properties
     var time: Int = 20
     var timer = Timer()
-    var wordsOfCategory: Category? = nil
-    var actionOfCategory: ActionWordCategory? = nil
+    var wordsOfCategory: Category?
+    var action: Action = Action()
     var teams: [Team] = []
-    var selectedTeam: Team? = nil
-    var rounds: Int? = nil
+    var selectedTeam: Team?
+    var rounds: Int?
     var currentRound: Int = 1
-    var currentWord: String? = nil
-    var currentAction: String? = nil
+    var currentWord: String?
+    var currentAction: String?
     
     //MARK: - Logic
     func gameSetup() {
@@ -35,7 +35,7 @@ class GameBrain {
     }
     
     func getRandomActionWord() {
-        let randomAction = actionOfCategory?.words.randomElement()
+        let randomAction = action.actionOfarray.randomElement()
         currentAction = randomAction
     }
     
@@ -58,7 +58,7 @@ class GameBrain {
         selectedTeam?.score -= 3
     }
     
-    func getNextTeamName() -> String{
+    func getNextTeamName() -> String {
         return teams[currentRound].name
     }
     

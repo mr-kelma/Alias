@@ -48,7 +48,6 @@ class SettingsViewController: UIViewController {
     //MARK: - Actions
     @IBAction func stepperAction(_ sender: UIStepper) {
         countTeam.text = String(Int(sender.value))
-        
     }
 
     //Assign selectedCategory text of buttons and change background of buttons

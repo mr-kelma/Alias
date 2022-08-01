@@ -33,7 +33,6 @@ class GameViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
         scoreLabel.text = String(gameBrain?.selectedTeam?.score ?? 0)
     }
     

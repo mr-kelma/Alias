@@ -18,6 +18,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     
+    let jokeManager = JokeManager()
+    
     override var shouldAutorotate: Bool {
         return false
     }

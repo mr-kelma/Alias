@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 //MARK: - Timer for GameViewController
 extension GameViewController {
     
@@ -21,10 +20,12 @@ extension GameViewController {
         if gameBrain?.time != 0 {
             gameBrain?.time -= 1
             timerLabel.text = String(gameBrain?.time ?? 0)
+            guard gameBrain?.time == 10 else {return}
+            self.performSegue(withIdentifier: "goToAction", sender: self)
         } else {
             gameBrain?.time = 0
             gameBrain?.timer.invalidate()
-            //Переходы на экраны результатов
+            //Transitions to results screens
             guard let rounds = gameBrain?.rounds else {return}
             if gameBrain?.currentRound ?? 1 < rounds {
             self.performSegue(withIdentifier: "goToResultOfRound", sender: self)

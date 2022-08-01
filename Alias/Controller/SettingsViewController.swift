@@ -50,14 +50,14 @@ class SettingsViewController: UIViewController {
         countTeam.text = String(Int(sender.value))
         
     }
-    
-    //Присваиваем selectedCategory текст кнопки и меняем background
+
+    //Assign selectedCategory text of buttons and change background of buttons
     @IBAction func pressedGategory(_ sender: UIButton) {
         guard let text = sender.titleLabel?.text else {
             return
         }
         selectedCategory = text
-        
+
         for button in [natureButton, sportButton, geoButton, literButton] {
             if selectedCategory == button?.titleLabel?.text{
                 button?.tintColor = #colorLiteral(red: 0.8885846397, green: 0.4469456078, blue: 0.002523117625, alpha: 1)
@@ -83,12 +83,5 @@ class SettingsViewController: UIViewController {
         }
         gameBrain.teams = teams
         gameBrain.wordsOfCategory = wordsOfCategory
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGame" {
-            let destinationVC = segue.destination as! GameViewController
-            destinationVC.gameBrain = gameBrain
-        }
     }
 }

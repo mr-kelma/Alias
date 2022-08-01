@@ -10,5 +10,4 @@ import Foundation
 struct Team {
     var name: String
     var score: Int = 0
-    var guessedWords: Int = 0
 }

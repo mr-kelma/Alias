@@ -9,14 +9,16 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var time: Int = 60
+    var time: Int = 20
     var timer = Timer()
-    var wordsOfCategory: Category? = nil
+    var wordsOfCategory: Category?
+    var action: Action = Action()
     var teams: [Team] = []
-    var selectedTeam: Team? = nil
-    var rounds: Int? = nil
+    var selectedTeam: Team?
+    var rounds: Int?
     var currentRound: Int = 1
-    var currentWord: String? = nil
+    var currentWord: String?
+    var currentAction: String?
     
     //MARK: - Logic
     func gameSetup() {
@@ -32,18 +34,31 @@ class GameBrain {
 //        let modifiedArray = array.filter { $0 != randomNumber }
     }
     
-    func addPoint() {
+    func getRandomActionWord() {
+        let randomAction = action.actionOfarray.randomElement()
+        currentAction = randomAction
+    }
+    
+    func addPointForWord() {
         selectedTeam?.score += 1
-        selectedTeam?.guessedWords += 1
         getRandomWord()
     }
     
-    func minusPoint() {
+    func minusPointForWord() {
         selectedTeam?.score -= 1
         getRandomWord()
     }
     
-    func getNextTeamName() -> String{
+    func addPointForAction() {
+        selectedTeam?.score += 3
+
+    }
+    
+    func minusPointForAction() {
+        selectedTeam?.score -= 3
+    }
+    
+    func getNextTeamName() -> String {
         return teams[currentRound].name
     }
     
@@ -54,7 +69,6 @@ class GameBrain {
     func resetGame() {
         for var team in teams {
             team.score = 0
-            team.guessedWords = 0
         }
         selectedTeam = nil
         currentRound = 1

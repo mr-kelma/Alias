@@ -9,20 +9,24 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var timeConstant: Int = 20
-    var timeOfGame: Int = 20
+    let timeConstantOfGame: Int = 10
+    var timeOfGame: Int = 10
     var timerOfGame = Timer()
-    var timeOfAction: Int = 10
+    let timeConstantOfAction: Int = 5
+    var timeOfAction: Int = 5
     var timerOfAction = Timer()
     var wordsOfCategory: Category?
     var action: Action = Action()
     var teams: [Team] = []
+    var teamsList: [String] = []
+    var teamsResult: [Int] = []
     var selectedTeam: Team?
     var rounds: Int?
     var currentRound: Int = 1
     var arrayOfWords: [String?] = []
     var currentWord: String?
     var currentAction: String?
+    var finalResult: String = ""
     
     //MARK: - Logic
     func gameSetup() {
@@ -69,14 +73,30 @@ class GameBrain {
     }
     
     func changeSelectedTeam() {
-        timeOfGame = timeConstant
+        timeOfGame = timeConstantOfGame
+        timeOfAction = timeConstantOfAction
         currentRound += 1
     }
     
-    func saveScore() {
-        for var team in teams {
-            team.score = selectedTeam?.score ?? 0
+    func saveResult() {
+        teamsList.append(selectedTeam?.name ?? "Команда 0")
+        teamsResult.append(selectedTeam?.score ?? 0)
+        print(teamsList)
+        print(teamsResult)
+    }
+    
+    func getFinalResult() -> String {
+        for i in 1...teamsList.count {
+            finalResult += " \(teamsList[i-1]) набрала: \(teamsResult[i-1]) очков"
         }
+        return finalResult
+    }
+    
+    func getWinningTeam()  -> String {
+        let maxResults = teamsResult.max() ?? 0
+        let indefOfMaxResults = teamsResult.firstIndex(of: maxResults) ?? 0
+        let winningTeam = "Победила: \(teamsList[indefOfMaxResults])"
+        return winningTeam
     }
     
     func resetGame() {

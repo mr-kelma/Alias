@@ -370,7 +370,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0LX-1z-Ksy"/>
                                             <constraint firstAttribute="height" constant="200" id="bpT-wu-XS1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="100"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="120"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
@@ -561,7 +561,7 @@
                                             <constraint firstAttribute="height" constant="200" id="R1S-d2-CsA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="o6v-DE-On6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="100"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="120"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -583,6 +583,18 @@
                                     <constraint firstItem="PCH-rl-XiI" firstAttribute="centerY" secondItem="CDc-kg-29y" secondAttribute="centerY" id="hke-U7-ybZ"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Действие:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmO-0H-TRb">
+                                <rect key="frame" x="20" y="476" width="139.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8JB-EB-vCt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iCE-Fb-2H3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LEE-Qe-CGa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -594,6 +606,7 @@
                             <constraint firstAttribute="bottom" secondItem="nuY-9i-TXz" secondAttribute="bottom" id="BjB-4B-ddf"/>
                             <constraint firstItem="LEE-Qe-CGa" firstAttribute="trailing" secondItem="VBb-xb-mkk" secondAttribute="trailing" constant="20" id="Br3-Fv-Okc"/>
                             <constraint firstItem="LEE-Qe-CGa" firstAttribute="trailing" secondItem="DVc-Ga-Fsw" secondAttribute="trailing" constant="20" id="EVw-gY-zV7"/>
+                            <constraint firstItem="LEE-Qe-CGa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TmO-0H-TRb" secondAttribute="trailing" symbolic="YES" id="Mmj-hk-kTh"/>
                             <constraint firstItem="Rzm-iD-mL3" firstAttribute="top" secondItem="553-oF-2i3" secondAttribute="bottom" id="QuM-H2-qsj"/>
                             <constraint firstItem="553-oF-2i3" firstAttribute="top" secondItem="CDc-kg-29y" secondAttribute="bottom" id="R3x-g4-c0L"/>
                             <constraint firstItem="nuY-9i-TXz" firstAttribute="leading" secondItem="LEE-Qe-CGa" secondAttribute="leading" id="Wbn-eu-BAx"/>
@@ -602,8 +615,10 @@
                             <constraint firstAttribute="bottom" secondItem="Rzm-iD-mL3" secondAttribute="bottom" constant="50" id="ebq-yd-tnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CDc-kg-29y" secondAttribute="trailing" id="hAk-CT-VbK"/>
                             <constraint firstItem="VBb-xb-mkk" firstAttribute="leading" secondItem="LEE-Qe-CGa" secondAttribute="leading" constant="20" id="oCk-s9-QU8"/>
+                            <constraint firstItem="TmO-0H-TRb" firstAttribute="leading" secondItem="9By-X2-bbA" secondAttribute="leadingMargin" id="orD-2K-LK5"/>
                             <constraint firstItem="nuY-9i-TXz" firstAttribute="top" secondItem="9By-X2-bbA" secondAttribute="top" id="qJR-9h-1WQ"/>
                             <constraint firstItem="CDc-kg-29y" firstAttribute="top" secondItem="DVc-Ga-Fsw" secondAttribute="bottom" id="vcY-g6-dME"/>
+                            <constraint firstItem="TmO-0H-TRb" firstAttribute="top" secondItem="CDc-kg-29y" secondAttribute="bottom" id="y97-U3-iRy"/>
                             <constraint firstItem="nuY-9i-TXz" firstAttribute="trailing" secondItem="LEE-Qe-CGa" secondAttribute="trailing" id="yej-Us-m1J"/>
                             <constraint firstItem="LEE-Qe-CGa" firstAttribute="trailing" secondItem="553-oF-2i3" secondAttribute="trailing" constant="20" id="ylp-DE-PPi"/>
                             <constraint firstItem="VBb-xb-mkk" firstAttribute="top" secondItem="LEE-Qe-CGa" secondAttribute="top" constant="30" id="ynx-dH-izi"/>
@@ -766,9 +781,9 @@
                                     <action selector="finishButtonPressed:" destination="IkA-1Q-TI4" eventType="touchUpInside" id="an9-SB-vhM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Победила Команда #" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10G-7b-TXe">
-                                <rect key="frame" x="40" y="353.5" width="344" height="55.5"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Победила Команда #" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10G-7b-TXe">
+                                <rect key="frame" x="40" y="353.5" width="344" height="129"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.99926785060000001" blue="0.97422928249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -789,16 +804,11 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="NKd-Fo-7Qs">
-                        <barButtonItem key="rightBarButtonItem" title="Выход" id="Pjx-fQ-nZZ">
-                            <connections>
-                                <action selector="outButtonPressed:" destination="IkA-1Q-TI4" id="XsP-Co-1uU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="NKd-Fo-7Qs"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="outButton" destination="Pjx-fQ-nZZ" id="rby-4X-WCs"/>
+                        <outlet property="listResultsLabel" destination="cLR-Ue-ztO" id="lpM-EQ-XL7"/>
+                        <outlet property="winningTeamLabel" destination="10G-7b-TXe" id="OfQ-9F-TZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSh-X2-yqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

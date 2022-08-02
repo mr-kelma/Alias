@@ -7,10 +7,10 @@ protocol JokeManagerDelegate: AnyObject {
 
 struct JokeManager {
     
-    let jokeURL = "http://rzhunemogu.ru/RandJSON.aspx?CType=1"
+    let jokeURL = "https://geek-jokes.sameerkumar.website/api?format=json"
     weak var delegate: JokeManagerDelegate?
     
-    func performRequest(with jokeURL: String) {
+    func performRequest() {
         if let url = URL(string: jokeURL) {
             let session = URLSession(configuration: .default)
             
@@ -20,8 +20,9 @@ struct JokeManager {
                 }
                 
                 if let safeData = data {
-                    if let joke = self.parseJSON(safeData) {
-                        self.delegate?.didUpdateJoke(self, joke: joke)
+                    print(safeData)
+                        if let joke = self.parseJSON(safeData) {
+                            self.delegate?.didUpdateJoke(self, joke: joke)
                     }
                 }
             }

@@ -9,21 +9,41 @@ import UIKit
 
 class ResultOfRoundViewController: UIViewController {
 
+    //MARK: - Views
+    @IBOutlet weak var outButton: UIBarButtonItem!
+    @IBOutlet weak var currentResultLabel: UILabel!
+    @IBOutlet weak var nextTeamLabel: UILabel!
+    @IBOutlet weak var jokeLabel: UILabel!
+    
+    //MARK: - Properties
+    var gameBrain: GameBrain?
+    var jokeManager = JokeManager()
+    var callBack: (()-> ())?
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        startViews()
+    }
+     
+    //MARK: - Setup views
+    func startViews() {
+        navigationItem.hidesBackButton = true
+        outButton.tintColor = .white
+        jokeManager.delegate = self
+        jokeManager.performRequest()
+        currentResultLabel.text = "\(gameBrain?.selectedTeam?.name ?? "Команда 1") набрала: \(gameBrain?.selectedTeam?.score ?? 0) очков"
+        nextTeamLabel.text = "Следующая играет: \(gameBrain?.getNextTeamName() ?? "Команда 2")"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Actions
+    @IBAction func outButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+        gameBrain?.resetGame()
     }
-    */
-
+    
+    @IBAction func nextRoundPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        callBack?()
+    }
 }

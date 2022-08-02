@@ -7,33 +7,52 @@
 
 import UIKit
 
-
 //MARK: - Timer for GameViewController
 extension GameViewController {
     
-    func timerProcess(){
-        gameBrain.timer.invalidate()
-        gameBrain.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    func timerProcessOfMainGame() {
+        gameBrain?.timerOfGame.invalidate()
+        gameBrain?.timerOfGame = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerOfMainGame), userInfo: nil, repeats: true)
     }
     
     @objc
-    func updateTimer() {
-        if gameBrain.time != 0 {
-            gameBrain.time -= 1
-            timerLabel.text = String(gameBrain.time)
+    func updateTimerOfMainGame() {
+        if gameBrain?.timeOfGame != 0 {
+            gameBrain?.timeOfGame -= 1
+            timerLabel.text = String(gameBrain?.timeOfGame ?? 60)
+            //Transitions to screen of action
+            guard gameBrain?.timeOfGame == 30 else { return }
+            self.performSegue(withIdentifier: "goToAction", sender: self)
         } else {
-            gameBrain.time = 0
-            gameBrain.timer.invalidate()
-            //Переходы на экраны результатов
-            guard let rounds = gameBrain.rounds else {
-                return
-            }
-            if gameBrain.currentRound < rounds {
-            self.performSegue(withIdentifier: "goToResultOfRound", sender: self)
+            gameBrain?.timerOfGame.invalidate()
+            //Transitions to results screens
+            guard let rounds = gameBrain?.rounds else { return }
+            if gameBrain?.currentRound ?? 4 < rounds {
+                gameBrain?.saveResult()
+                self.performSegue(withIdentifier: "goToResultOfRound", sender: self)
             } else {
+                gameBrain?.saveResult()
                 self.performSegue(withIdentifier: "goToResultOfFinal", sender: self)
             }
         }
     }
+}
+
+//MARK: - Timer for ActionViewController
+extension ActionViewController {
     
+    func timerProcessOfAction(){
+        gameBrain?.timerOfAction.invalidate()
+        gameBrain?.timerOfAction = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerOfAction), userInfo: nil, repeats: true)
+    }
+    
+    @objc
+    func updateTimerOfAction() {
+        if gameBrain?.timeOfAction != 0 {
+            gameBrain?.timeOfAction -= 1
+            timerLabel.text = String(gameBrain?.timeOfAction ?? 0)
+        } else {
+            gameBrain?.timerOfAction.invalidate()
+        }
+    }
 }

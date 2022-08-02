@@ -9,14 +9,24 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var time: Int = 60
-    var timer = Timer()
-    var wordsOfCategory: Category? = nil
+    let timeConstantOfGame: Int = 60
+    var timeOfGame: Int = 60
+    var timerOfGame = Timer()
+    let timeConstantOfAction: Int = 30
+    var timeOfAction: Int = 30
+    var timerOfAction = Timer()
+    var wordsOfCategory: Category?
+    var action: Action = Action()
     var teams: [Team] = []
-    var selectedTeam: Team? = nil
-    var rounds: Int? = nil
+    var teamsList: [String] = []
+    var teamsResult: [Int] = []
+    var selectedTeam: Team?
+    var rounds: Int?
     var currentRound: Int = 1
-    var currentWord: String? = nil
+    var arrayOfWords: [String?] = []
+    var currentWord: String?
+    var currentAction: String?
+    var finalResult: String = ""
     
     //MARK: - Logic
     func gameSetup() {
@@ -24,37 +34,72 @@ class GameBrain {
         self.rounds = teams.count
     }
     
-    func getRandomWord() {
-        let randomWord = wordsOfCategory?.words.randomElement()
-        currentWord = randomWord
-        
-        //добавить функционал, исключающий выпавшее слово из массива
-//        let modifiedArray = array.filter { $0 != randomNumber }
+    func getArrayOfWords() {
+        let array = wordsOfCategory?.words
+        arrayOfWords = array ?? ["Error"]
     }
     
-    func addPoint() {
+    func getRandomWord() {
+        let randomWord = arrayOfWords.randomElement()
+        currentWord = randomWord!!
+        arrayOfWords = arrayOfWords.filter { $0 != randomWord }
+    }
+    
+    func getRandomActionWord() {
+        let randomAction = action.actionOfarray.randomElement()
+        currentAction = randomAction
+    }
+    
+    func addPointForWord() {
         selectedTeam?.score += 1
-        selectedTeam?.guessedWords += 1
         getRandomWord()
     }
     
-    func minusPoint() {
+    func minusPointForWord() {
         selectedTeam?.score -= 1
         getRandomWord()
     }
     
-    func getNextTeamName() -> String{
+    func addPointForAction() {
+        selectedTeam?.score += 3
+    }
+    
+    func minusPointForAction() {
+        selectedTeam?.score -= 3
+    }
+    
+    func getNextTeamName() -> String {
         return teams[currentRound].name
     }
     
     func changeSelectedTeam() {
+        timeOfGame = timeConstantOfGame
+        timeOfAction = timeConstantOfAction
         currentRound += 1
+    }
+    
+    func saveResult() {
+        teamsList.append(selectedTeam?.name ?? "Команда 0")
+        teamsResult.append(selectedTeam?.score ?? 0)
+    }
+    
+    func getFinalResult() -> String {
+        for i in 1...teamsList.count {
+            finalResult += " \(teamsList[i-1]) набрала: \(teamsResult[i-1]) очков"
+        }
+        return finalResult
+    }
+    
+    func getWinningTeam()  -> String {
+        let maxResults = teamsResult.max() ?? 0
+        let indefOfMaxResults = teamsResult.firstIndex(of: maxResults) ?? 0
+        let winningTeam = "Победила: \(teamsList[indefOfMaxResults])"
+        return winningTeam
     }
     
     func resetGame() {
         for var team in teams {
             team.score = 0
-            team.guessedWords = 0
         }
         selectedTeam = nil
         currentRound = 1

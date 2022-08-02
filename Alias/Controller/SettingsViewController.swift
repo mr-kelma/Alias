@@ -17,6 +17,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var geoButton: UIButton!
     @IBOutlet weak var literButton: UIButton!
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     //MARK: - Properties
     var gameBrain: GameBrain = GameBrain()
     var teams: [Team] = []
@@ -36,41 +40,39 @@ class SettingsViewController: UIViewController {
         }
         stepper.value = 0
         stepper.minimumValue = 2
-        stepper.tintColor = .orange
-        natureButton.tintColor = .orange
-        sportButton.tintColor = .orange
-        geoButton.tintColor = .orange
-        literButton.tintColor = .orange
+        stepper.maximumValue = 5
+        for button in [natureButton, sportButton, geoButton, literButton] {
+            button?.tintColor = .orange
+        }
     }
     
     //MARK: - Actions
     @IBAction func stepperAction(_ sender: UIStepper) {
         countTeam.text = String(Int(sender.value))
-        
     }
-    
-    //Присваиваем selectedCategory текст кнопки и меняем background
+
+    //Assign selectedCategory text of buttons and change background of buttons
     @IBAction func pressedGategory(_ sender: UIButton) {
         guard let text = sender.titleLabel?.text else {
             return
         }
         selectedCategory = text
-        
+
         for button in [natureButton, sportButton, geoButton, literButton] {
             if selectedCategory == button?.titleLabel?.text{
-                button?.backgroundColor = .lightGray
+                button?.tintColor = #colorLiteral(red: 0.7904351763, green: 0.4046254411, blue: 0.008939528269, alpha: 1)
             } else {
-                button?.backgroundColor = .white
+                button?.tintColor = .orange
             }
         }
         
-        if selectedCategory == "Природа"{
+        if selectedCategory == "Природа" {
             wordsOfCategory = .nature
-        } else if selectedCategory == "Спорт"{
+        } else if selectedCategory == "Спорт" {
             wordsOfCategory = .sport
-        } else if selectedCategory == "География"{
+        } else if selectedCategory == "География" {
             wordsOfCategory = .geo
-        } else if selectedCategory == "Литература"{
+        } else if selectedCategory == "Литература" {
             wordsOfCategory = .liter
         }
     }
@@ -81,12 +83,5 @@ class SettingsViewController: UIViewController {
         }
         gameBrain.teams = teams
         gameBrain.wordsOfCategory = wordsOfCategory
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGame" {
-            let destinationVC = segue.destination as! GameViewController
-            destinationVC.gameBrain = gameBrain
-        }
     }
 }

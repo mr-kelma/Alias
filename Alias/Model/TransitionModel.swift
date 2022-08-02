@@ -52,3 +52,15 @@ extension ResultOfRoundViewController: JokeManagerDelegate {
         print(error)
     }
 }
+
+//MARK: - Transitions for ResultOfFinalViewController
+extension ResultOfFinalViewController: JokeManagerDelegate {
+    func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke) {
+        DispatchQueue.main.async {
+            self.jokeLabel.text = joke.joke
+        }
+    }
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+}

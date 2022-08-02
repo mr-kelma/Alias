@@ -15,7 +15,6 @@ class ResultOfRoundViewController: UIViewController {
     @IBOutlet weak var nextTeamLabel: UILabel!
     @IBOutlet weak var jokeLabel: UILabel!
     
-    
     //MARK: - Properties
     var gameBrain: GameBrain?
     var jokeManager = JokeManager()

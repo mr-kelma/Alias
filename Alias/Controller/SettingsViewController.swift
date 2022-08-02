@@ -60,7 +60,7 @@ class SettingsViewController: UIViewController {
 
         for button in [natureButton, sportButton, geoButton, literButton] {
             if selectedCategory == button?.titleLabel?.text{
-                button?.tintColor = #colorLiteral(red: 0.8885846397, green: 0.4469456078, blue: 0.002523117625, alpha: 1)
+                button?.tintColor = #colorLiteral(red: 0.7904351763, green: 0.4046254411, blue: 0.008939528269, alpha: 1)
             } else {
                 button?.tintColor = .orange
             }

@@ -9,11 +9,11 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    let timeConstantOfGame: Int = 10
-    var timeOfGame: Int = 10
+    let timeConstantOfGame: Int = 60
+    var timeOfGame: Int = 60
     var timerOfGame = Timer()
-    let timeConstantOfAction: Int = 5
-    var timeOfAction: Int = 5
+    let timeConstantOfAction: Int = 30
+    var timeOfAction: Int = 30
     var timerOfAction = Timer()
     var wordsOfCategory: Category?
     var action: Action = Action()
@@ -81,8 +81,6 @@ class GameBrain {
     func saveResult() {
         teamsList.append(selectedTeam?.name ?? "Команда 0")
         teamsResult.append(selectedTeam?.score ?? 0)
-        print(teamsList)
-        print(teamsResult)
     }
     
     func getFinalResult() -> String {

@@ -668,18 +668,10 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шутка:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-GU-agQ">
-                                <rect key="frame" x="40" y="356" width="334" height="57"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Текст шутки" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX2-Pk-SHW">
-                                <rect key="frame" x="40" y="433" width="334" height="333"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Текст шутки" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX2-Pk-SHW">
+                                <rect key="frame" x="40" y="316" width="334" height="450"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
@@ -716,13 +708,10 @@
                             <constraint firstItem="WMv-Vm-DRf" firstAttribute="leading" secondItem="esx-hp-bPR" secondAttribute="leading" constant="20" id="Bag-9o-4WT"/>
                             <constraint firstItem="AlE-i4-f63" firstAttribute="leading" secondItem="gbi-jV-LAN" secondAttribute="leading" constant="20" id="DlF-IP-rhi"/>
                             <constraint firstItem="AlE-i4-f63" firstAttribute="top" secondItem="gbi-jV-LAN" secondAttribute="top" constant="70" id="Dle-da-Qp7"/>
+                            <constraint firstItem="GX2-Pk-SHW" firstAttribute="top" secondItem="TeR-p7-myO" secondAttribute="bottom" id="Fmr-PT-aZx"/>
                             <constraint firstItem="GX2-Pk-SHW" firstAttribute="leading" secondItem="gbi-jV-LAN" secondAttribute="leadingMargin" constant="20" id="Ghu-Yl-ETa"/>
-                            <constraint firstItem="GX2-Pk-SHW" firstAttribute="top" secondItem="Loq-GU-agQ" secondAttribute="bottom" constant="20" id="JGa-v0-X2q"/>
                             <constraint firstAttribute="bottom" secondItem="WMv-Vm-DRf" secondAttribute="bottom" constant="50" id="Mlx-wK-xj9"/>
-                            <constraint firstItem="Loq-GU-agQ" firstAttribute="leading" secondItem="gbi-jV-LAN" secondAttribute="leadingMargin" constant="20" id="PzF-te-uy4"/>
                             <constraint firstItem="TeR-p7-myO" firstAttribute="top" secondItem="AlE-i4-f63" secondAttribute="bottom" constant="20" id="bai-UW-kOH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Loq-GU-agQ" secondAttribute="trailing" constant="20" id="mKR-sd-Uda"/>
-                            <constraint firstItem="Loq-GU-agQ" firstAttribute="top" secondItem="TeR-p7-myO" secondAttribute="bottom" constant="40" id="moH-LI-vTq"/>
                             <constraint firstAttribute="trailing" secondItem="TeR-p7-myO" secondAttribute="trailing" constant="20" id="rz8-ZA-hRf"/>
                             <constraint firstItem="esx-hp-bPR" firstAttribute="trailing" secondItem="WMv-Vm-DRf" secondAttribute="trailing" constant="20" id="wgz-Q7-yNz"/>
                         </constraints>
@@ -789,17 +778,29 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Текст шутки" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvM-fU-Vxd">
+                                <rect key="frame" x="40" y="482.5" width="334" height="283.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5WR-s9-S7j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ndV-iU-mJp" secondAttribute="bottom" constant="50" id="5sV-am-29C"/>
                             <constraint firstItem="10G-7b-TXe" firstAttribute="leading" secondItem="fJf-qk-0h3" secondAttribute="leadingMargin" constant="20" id="A3x-nz-IZS"/>
+                            <constraint firstItem="ndV-iU-mJp" firstAttribute="top" secondItem="TvM-fU-Vxd" secondAttribute="bottom" id="ApA-RD-Gtv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="10G-7b-TXe" secondAttribute="trailing" constant="10" id="Cz7-ia-2l5"/>
                             <constraint firstItem="cLR-Ue-ztO" firstAttribute="leading" secondItem="fJf-qk-0h3" secondAttribute="leading" constant="20" id="H3d-oD-dRW"/>
                             <constraint firstAttribute="trailing" secondItem="cLR-Ue-ztO" secondAttribute="trailing" constant="10" id="JTI-ad-gL7"/>
                             <constraint firstItem="10G-7b-TXe" firstAttribute="top" secondItem="cLR-Ue-ztO" secondAttribute="bottom" constant="20" id="KO7-yI-7k5"/>
+                            <constraint firstItem="TvM-fU-Vxd" firstAttribute="top" secondItem="10G-7b-TXe" secondAttribute="bottom" id="Mrx-dw-0b6"/>
                             <constraint firstItem="ndV-iU-mJp" firstAttribute="centerX" secondItem="fJf-qk-0h3" secondAttribute="centerX" id="OQ5-MI-fQs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TvM-fU-Vxd" secondAttribute="trailing" constant="20" id="sLS-Mt-j3b"/>
+                            <constraint firstItem="TvM-fU-Vxd" firstAttribute="leading" secondItem="fJf-qk-0h3" secondAttribute="leadingMargin" constant="20" id="uoa-GG-BBi"/>
                             <constraint firstItem="cLR-Ue-ztO" firstAttribute="top" secondItem="5WR-s9-S7j" secondAttribute="top" constant="20" id="wwM-sL-z6c"/>
                         </constraints>
                     </view>
@@ -807,13 +808,14 @@
                     <navigationItem key="navigationItem" id="NKd-Fo-7Qs"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="jokeLabel" destination="TvM-fU-Vxd" id="5hm-m8-wCi"/>
                         <outlet property="listResultsLabel" destination="cLR-Ue-ztO" id="lpM-EQ-XL7"/>
                         <outlet property="winningTeamLabel" destination="10G-7b-TXe" id="OfQ-9F-TZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSh-X2-yqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4257" y="201"/>
+            <point key="canvasLocation" x="4256.521739130435" y="200.89285714285714"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="pLb-iX-Wr2">
@@ -1039,6 +1041,9 @@
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

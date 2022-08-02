@@ -8,12 +8,13 @@
 import UIKit
 
 class GameBrain {
+    
     //MARK: - Properties
-    let timeConstantOfGame: Int = 60
-    var timeOfGame: Int = 60
+    let timeConstantOfGame: Int = 20
+    var timeOfGame: Int = 20
     var timerOfGame = Timer()
-    let timeConstantOfAction: Int = 30
-    var timeOfAction: Int = 30
+    let timeConstantOfAction: Int = 10
+    var timeOfAction: Int = 10
     var timerOfAction = Timer()
     var wordsOfCategory: Category?
     var action: Action = Action()

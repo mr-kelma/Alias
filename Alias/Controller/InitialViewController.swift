@@ -15,7 +15,7 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var rulesOfGameButton: UIButton!
     
     override var shouldAutorotate: Bool {
-        return false
+        false
     }
     
     //MARK: - Lifecycle

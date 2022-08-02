@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var literButton: UIButton!
     
     override var shouldAutorotate: Bool {
-        return false
+        false
     }
     
     //MARK: - Properties

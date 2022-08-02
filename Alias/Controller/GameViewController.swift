@@ -20,7 +20,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     
     override var shouldAutorotate: Bool {
-        return false
+        false
     }
     
     //MARK: - Properties

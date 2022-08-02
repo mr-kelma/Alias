@@ -21,7 +21,7 @@ extension GameViewController {
             gameBrain?.timeOfGame -= 1
             timerLabel.text = String(gameBrain?.timeOfGame ?? 60)
             //Transitions to screen of action
-            guard gameBrain?.timeOfGame == 30 else { return }
+            guard gameBrain?.timeOfGame == 10 else { return }
             self.performSegue(withIdentifier: "goToAction", sender: self)
         } else {
             gameBrain?.timerOfGame.invalidate()

@@ -10,7 +10,7 @@ import UIKit
 //MARK: - Timer for GameViewController
 extension GameViewController {
     
-    func timerProcessOfMainGame(){
+    func timerProcessOfMainGame() {
         gameBrain?.timerOfGame.invalidate()
         gameBrain?.timerOfGame = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
@@ -19,12 +19,11 @@ extension GameViewController {
     func updateTimer() {
         if gameBrain?.timeOfGame != 0 {
             gameBrain?.timeOfGame -= 1
-            timerLabel.text = String(gameBrain?.timeOfGame ?? 0)
+            timerLabel.text = String(gameBrain?.timeOfGame ?? 60)
             //Transitions to screen of action
-//            guard gameBrain?.timeOfGame == 10 else { return }
-//            self.performSegue(withIdentifier: "goToAction", sender: self)
+            guard gameBrain?.timeOfGame == 10 else { return }
+            self.performSegue(withIdentifier: "goToAction", sender: self)
         } else {
-            gameBrain?.timeOfGame = 0
             gameBrain?.timerOfGame.invalidate()
             //Transitions to results screens
             guard let rounds = gameBrain?.rounds else { return }
@@ -50,6 +49,8 @@ extension ActionViewController {
         if gameBrain?.timeOfAction != 0 {
             gameBrain?.timeOfAction -= 1
             timerLabel.text = String(gameBrain?.timeOfAction ?? 0)
+        } else {
+            gameBrain?.timerOfAction.invalidate()
         }
     }
 }

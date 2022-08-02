@@ -32,4 +32,9 @@ class ResultOfFinalViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
         gameBrain?.resetGame()
     }
+    
+    @IBAction func finishButtonPressed(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+        gameBrain?.resetGame()
+    }
 }

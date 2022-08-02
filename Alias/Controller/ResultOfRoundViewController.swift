@@ -19,7 +19,7 @@ class ResultOfRoundViewController: UIViewController {
     //MARK: - Properties
     var gameBrain: GameBrain?
     var jokeManager = JokeManager()
-    var goBack: (()-> ())?
+    var callBack: (()-> ())?
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -42,8 +42,8 @@ class ResultOfRoundViewController: UIViewController {
         gameBrain?.resetGame()
     }
     
-    @IBAction func nextRoundPressed(_ sender: Any) {
+    @IBAction func nextRoundPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
-        goBack?()
+        callBack?()
     }
 }

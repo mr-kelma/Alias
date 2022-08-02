@@ -8,12 +8,13 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
     //MARK: - Views
     @IBOutlet weak var outButton: UIBarButtonItem!
     @IBOutlet weak var currentTeamLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var cicleImage: UIImageView!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
@@ -43,6 +44,7 @@ class GameViewController: UIViewController {
         }
         outButton.tintColor = .white
         navigationItem.hidesBackButton = true
+        rotateView(targetView: cicleImage)
     }
     
     func setupGame() {
@@ -53,6 +55,7 @@ class GameViewController: UIViewController {
         //Team score
         scoreLabel.text = String(gameBrain?.selectedTeam?.score ?? 0)
         //The first word on the screen
+        gameBrain?.getArrayOfWords()
         gameBrain?.getRandomWord()
         //Updating the wordlabel
         wordLabel.text = gameBrain?.currentWord

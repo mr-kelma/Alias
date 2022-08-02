@@ -15,6 +15,7 @@ class ActionViewController: UIViewController {
     @IBOutlet weak var currentTeamLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var cicleImage: UIImageView!
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var wrongButton: UIButton!
@@ -29,12 +30,18 @@ class ActionViewController: UIViewController {
         setupGame()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        //Starting the timer
+        timerProcessOfAction()
+    }
+    
     //MARK: - Setup views
     func startViews() {
         for button in [rightButton, wrongButton] {
             button?.layer.cornerRadius = 10
         }
         navigationItem.hidesBackButton = true
+        rotateView(targetView: cicleImage)
     }
 
     func setupGame() {
@@ -46,8 +53,6 @@ class ActionViewController: UIViewController {
         gameBrain?.getRandomActionWord()
         //Updating the actionlabel
         actionLabel.text = gameBrain?.currentAction
-        //Starting the timer
-        timerProcessOfAction()
     }
     
     //MARK: - Actions

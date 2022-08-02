@@ -29,10 +29,14 @@ extension GameViewController {
         if segue.identifier == "goToResultOfRound" {
             let destinationVC = segue.destination as! ResultOfRoundViewController
             destinationVC.gameBrain = gameBrain
-            destinationVC.goBack = { [weak self] in
+            destinationVC.callBack = { [weak self] in
                 self?.gameBrain?.changeSelectedTeam()
                 self?.setupGame()
             }
+        }
+        if segue.identifier == "goToResultOfFinal" {
+            let destinationVC = segue.destination as! ResultOfFinalViewController
+            destinationVC.gameBrain = gameBrain
         }
     }
 }

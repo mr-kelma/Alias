@@ -9,7 +9,8 @@ import UIKit
 
 class GameBrain {
     //MARK: - Properties
-    var timeOfGame: Int = 10
+    var timeConstant: Int = 20
+    var timeOfGame: Int = 20
     var timerOfGame = Timer()
     var timeOfAction: Int = 10
     var timerOfAction = Timer()
@@ -19,6 +20,7 @@ class GameBrain {
     var selectedTeam: Team?
     var rounds: Int?
     var currentRound: Int = 1
+    var arrayOfWords: [String?] = []
     var currentWord: String?
     var currentAction: String?
     
@@ -28,12 +30,15 @@ class GameBrain {
         self.rounds = teams.count
     }
     
+    func getArrayOfWords() {
+        let array = wordsOfCategory?.words
+        arrayOfWords = array ?? ["Error"]
+    }
+    
     func getRandomWord() {
-        let randomWord = wordsOfCategory?.words.randomElement()
-        currentWord = randomWord
-        
-        //добавить функционал, исключающий выпавшее слово из массива
-//        let modifiedArray = array.filter { $0 != randomNumber }
+        let randomWord = arrayOfWords.randomElement()
+        currentWord = randomWord!!
+        arrayOfWords = arrayOfWords.filter { $0 != randomWord }
     }
     
     func getRandomActionWord() {
@@ -53,7 +58,6 @@ class GameBrain {
     
     func addPointForAction() {
         selectedTeam?.score += 3
-
     }
     
     func minusPointForAction() {
@@ -65,6 +69,7 @@ class GameBrain {
     }
     
     func changeSelectedTeam() {
+        timeOfGame = timeConstant
         currentRound += 1
     }
     

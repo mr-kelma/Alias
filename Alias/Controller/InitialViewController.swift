@@ -14,10 +14,6 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var rulesOfGameButton: UIButton!
     
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

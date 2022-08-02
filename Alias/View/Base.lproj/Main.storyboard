@@ -81,7 +81,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSY-uy-XeM" secondAttribute="trailing" constant="57" id="xcO-B8-fG0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3ME-a4-Gaf"/>
+                    <navigationItem key="navigationItem" id="3ME-a4-Gaf">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="mMu-tF-QgR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="externalLogoImage" destination="Pe6-4D-5Ai" id="BeF-wg-O5p"/>
                         <outlet property="newGameButton" destination="28j-aC-VL6" id="lQI-yK-p2Q"/>
@@ -671,7 +673,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Текст шутки" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX2-Pk-SHW">
                                 <rect key="frame" x="40" y="316" width="334" height="450"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
@@ -781,7 +783,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Текст шутки" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvM-fU-Vxd">
                                 <rect key="frame" x="40" y="482.5" width="334" height="283.5"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
@@ -1004,9 +1006,7 @@
                             <constraint firstItem="i8F-Uc-X7g" firstAttribute="leading" secondItem="Gha-W4-Pa7" secondAttribute="leading" id="tzg-0f-ijt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7LN-Rq-kyt">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="Xmi-Pw-hb8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="7LN-Rq-kyt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwE-AZ-BWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1041,9 +1041,6 @@
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

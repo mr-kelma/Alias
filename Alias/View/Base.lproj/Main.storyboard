@@ -1006,9 +1006,7 @@
                             <constraint firstItem="i8F-Uc-X7g" firstAttribute="leading" secondItem="Gha-W4-Pa7" secondAttribute="leading" id="tzg-0f-ijt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7LN-Rq-kyt">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="Xmi-Pw-hb8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="7LN-Rq-kyt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwE-AZ-BWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,10 +19,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
     //MARK: - Properties
     var gameBrain: GameBrain?
     

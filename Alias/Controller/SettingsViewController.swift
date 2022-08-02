@@ -17,10 +17,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var geoButton: UIButton!
     @IBOutlet weak var literButton: UIButton!
     
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
     //MARK: - Properties
     var gameBrain: GameBrain = GameBrain()
     var teams: [Team] = []

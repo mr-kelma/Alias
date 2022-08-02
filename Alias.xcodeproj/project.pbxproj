@@ -425,9 +425,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "delete\\ ![Delete\\ -\\ Landscape\\ (left\\ home\\ button),\\ Landscape\\ (right\\ home\\ button),\\ Landscape\\ (top\\ home\\ button)][1] UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "delete\\ ![Delete\\ -\\ Landscape\\ (left\\ home\\ button),\\ Landscape\\ (right\\ home\\ button),\\ Landscape\\ (top\\ home\\ button)][1]";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "delete\\ ![Delete\\ -\\ Landscape\\ (left\\ home\\ button),\\ Landscape\\ (right\\ home\\ button),\\ Landscape\\ (top\\ home\\ button)][1]";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,9 +455,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "delete\\ ![Delete\\ -\\ Landscape\\ (left\\ home\\ button),\\ Landscape\\ (right\\ home\\ button),\\ Landscape\\ (top\\ home\\ button)][1] UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "delete\\ ![Delete\\ -\\ Landscape\\ (left\\ home\\ button),\\ Landscape\\ (right\\ home\\ button),\\ Landscape\\ (top\\ home\\ button)][1]";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "delete\\ ![Delete\\ -\\ Landscape\\ (left\\ home\\ button),\\ Landscape\\ (right\\ home\\ button),\\ Landscape\\ (top\\ home\\ button)][1]";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

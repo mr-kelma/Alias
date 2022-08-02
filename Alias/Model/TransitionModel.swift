@@ -45,7 +45,7 @@ extension GameViewController {
 extension ResultOfRoundViewController: JokeManagerDelegate {
     func didUpdateJoke(_ jokeManager: JokeManager, joke: Joke) {
         DispatchQueue.main.async {
-            self.jokeLabel.text = joke.content
+            self.jokeLabel.text = joke.joke
         }
     }
     func didFailWithError(error: Error) {

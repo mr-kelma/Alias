@@ -32,6 +32,7 @@ class ResultOfRoundViewController: UIViewController {
         navigationItem.hidesBackButton = true
         outButton.tintColor = .white
         jokeManager.delegate = self
+        jokeManager.performRequest()
         currentResultLabel.text = "\(gameBrain?.selectedTeam?.name ?? "Команда 1") набрала: \(gameBrain?.selectedTeam?.score ?? 0) очков"
         nextTeamLabel.text = "Следующая играет: \(gameBrain?.getNextTeamName() ?? "Команда 2")"
     }

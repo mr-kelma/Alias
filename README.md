@@ -1,6 +1,6 @@
 # Alias
 
-This is our project in the first challenge at the "SWIFT MARAPHON 4.0" on the course "The Complete iOS App Development Bootcamp" by Angela.
+This is our project in the first challenge at the "SWIFT MARATHON 4.0" on the course "The Complete iOS App Development Bootcamp" by Angela.
 
 **Used:** UIKit/Storyboard/MVC.
 

@@ -84,6 +84,7 @@
 			children = (
 				70108EB32893C47A00E80AC8 /* .gitignore */,
 				709C11B2288FF6050018867B /* Alias */,
+				709C11C1288FF6080018867B /* Info.plist */,
 				709C11B1288FF6050018867B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,7 +105,6 @@
 				709C11C9288FF6790018867B /* Controller */,
 				709C11C8288FF64A0018867B /* Resources */,
 				709C11D2288FF7FC0018867B /* App */,
-				709C11C1288FF6080018867B /* Info.plist */,
 			);
 			path = Alias;
 			sourceTree = "<group>";
